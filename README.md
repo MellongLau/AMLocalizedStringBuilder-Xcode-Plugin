@@ -9,9 +9,9 @@ AMLocalizedStringBuilder
 
 </p>
 
-AMLocalizedStringBuilder is the localized string helper which help you build your loacalized string file `xxx.string` to object-c class `AMLocalizedString`, and you can use your localized string key by `R_String.<#your_localized_string_key#>`, the shotcut key is `ctrl+f`.
+AMLocalizedStringBuilder is the localized string helper which help you build your loacalized string file `Localizable.strings` to object-c class `AMLocalizedString`, and you can use your localized string key by `R_String.<#your_localized_string_key#>`, the shortcut key is `ctrl+f`.
 
-*AMLocalizedStringBuilder 可以帮助你根据语言本地化文件`xxx.stings`生成object-c的类`AMLocalizedString`，这样使用可以直接使用`R_String.<#你的本地化字符串key#>`获取对应key的值，还可以随时点击`Alt`或`Option`按键查看当前字符串的值。*
+*AMLocalizedStringBuilder 可以帮助你根据语言本地化文件`Localizable.strings`生成object-c的类`AMLocalizedString`，这样使用可以直接使用`R_String.<#你的本地化字符串key#>`获取对应key的值，还可以随时点击`Alt`或`Option`按键查看当前字符串的值。*
 
 **如果觉得这款插件不错的话请点击右上角的star和推荐给你的朋友，如果想即时了解到我的最新消息，请拉到底部扫描二维码关注我的公众号**
 

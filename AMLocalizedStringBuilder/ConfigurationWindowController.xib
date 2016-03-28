@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ConfigurationWindowController">
@@ -15,19 +15,19 @@
         <window title="AMLocalizedStringBuilder" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <rect key="contentRect" x="784" y="373" width="480" height="259"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="259"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView ambiguous="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZN2-uU-fTn">
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZN2-uU-fTn">
                         <rect key="frame" x="20" y="42" width="440" height="180"/>
-                        <clipView key="contentView" ambiguous="YES" id="Xb3-75-Ec1">
-                            <rect key="frame" x="1" y="17" width="438" height="162"/>
+                        <clipView key="contentView" id="Xb3-75-Ec1">
+                            <rect key="frame" x="1" y="0.0" width="438" height="179"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="wWx-Zs-U6G" id="SEb-E3-4L7">
-                                    <rect key="frame" x="0.0" y="0.0" width="436" height="19"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="438" height="156"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -79,7 +79,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <tableHeaderView key="headerView" id="wWx-Zs-U6G">
-                            <rect key="frame" x="0.0" y="0.0" width="438" height="17"/>
+                            <rect key="frame" x="0.0" y="0.0" width="438" height="23"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
@@ -97,8 +97,8 @@
                             <action selector="onCloseButtonClicked:" target="-2" id="ewf-oB-9dT"/>
                         </connections>
                     </button>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EnP-5W-4FY">
-                        <rect key="frame" x="19" y="230" width="243" height="17"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EnP-5W-4FY">
+                        <rect key="frame" x="19" y="230" width="254" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Select which language string file to build." id="dhI-Zd-E4m">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -108,8 +108,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="EnP-5W-4FY" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="12" id="58F-pN-9Wk"/>
+                    <constraint firstItem="cYf-EO-42G" firstAttribute="top" secondItem="ZN2-uU-fTn" secondAttribute="bottom" constant="12" id="IWO-1r-WDY"/>
                     <constraint firstItem="ZN2-uU-fTn" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="37" id="KHW-rt-VZA"/>
-                    <constraint firstItem="cYf-EO-42G" firstAttribute="top" secondItem="SEb-E3-4L7" secondAttribute="bottom" constant="13" id="UQY-4m-gWO"/>
                     <constraint firstItem="ZN2-uU-fTn" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="a5v-kj-6Dg"/>
                     <constraint firstAttribute="trailing" secondItem="ZN2-uU-fTn" secondAttribute="trailing" constant="20" id="bmi-Sl-oCp"/>
                     <constraint firstItem="EnP-5W-4FY" firstAttribute="leading" secondItem="SEb-E3-4L7" secondAttribute="leading" id="h1B-zy-m5w"/>
