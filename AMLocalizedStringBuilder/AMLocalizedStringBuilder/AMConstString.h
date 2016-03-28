@@ -18,4 +18,3 @@ extern NSString * const kMenuKeyMask;
 extern NSString * const kMenuKeyEquivalent;
 
 extern NSString * const kMenuActionTitle;
-extern NSString * const kStoreLocalizedStringPath;

@@ -108,10 +108,6 @@
 				246ADFE11CA9045800A1D5B3 /* ConfigurationWindowController.xib */,
 				24BA88FA1CA8D33300D4B872 /* XcodeHelper.h */,
 				24BA88FB1CA8D33300D4B872 /* XcodeHelper.m */,
-				24BA89031CA8D3B400D4B872 /* AutoGenLocalizedString.sh */,
-				246ADFE41CA9109600A1D5B3 /* FindLocalizedStringFiles.sh */,
-				246ADFE71CA91FD600A1D5B3 /* MenuItemData.plist */,
-				24BA88FD1CA8D33300D4B872 /* Info.plist */,
 				24BA88F41CA8D33300D4B872 /* Supporting Files */,
 			);
 			path = AMLocalizedStringBuilder;
@@ -120,6 +116,10 @@
 		24BA88F41CA8D33300D4B872 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				246ADFE71CA91FD600A1D5B3 /* MenuItemData.plist */,
+				24BA88FD1CA8D33300D4B872 /* Info.plist */,
+				24BA89031CA8D3B400D4B872 /* AutoGenLocalizedString.sh */,
+				246ADFE41CA9109600A1D5B3 /* FindLocalizedStringFiles.sh */,
 				24BA88F51CA8D33300D4B872 /* AMLocalizedStringBuilder.xcscheme */,
 			);
 			name = "Supporting Files";

@@ -51,12 +51,11 @@
         return nil;
     }
     NSArray *result = [self.dataList[row] componentsSeparatedByString:@"/"];
-    return [NSString stringWithFormat:@"../%@/%@", result[result.count-2], result.lastObject];
+    return [NSString stringWithFormat:@".../%@/%@", result[result.count-2], result.lastObject];
 }
 
 - (void)tableView:(NSTableView *)tableView setObjectValue:(id)anObject forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-    // Retrieve the model object corresponding to `row'
     [self.tableView reloadData];
     [[NSUserDefaults standardUserDefaults] setObject:self.dataList[row] forKey:_projectName];
     [[NSUserDefaults standardUserDefaults] synchronize];

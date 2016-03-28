@@ -28,6 +28,16 @@
 			<string>Setting</string>
 			<key>selector</key>
 			<string>showSettingWindow</string>
+			<key>shortcut</key>
+			<dict>
+				<key>keyMask</key>
+				<array>
+					<string>ctrl</string>
+					<string>cmd</string>
+				</array>
+				<key>keyEquivalent</key>
+				<string>s</string>
+			</dict>
 		</dict>
 		<dict>
 			<key>title</key>

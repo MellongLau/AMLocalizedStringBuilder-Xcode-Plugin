@@ -19,4 +19,3 @@ NSString * const kMenuKeyMask = @"keyMask";
 NSString * const kMenuKeyEquivalent = @"keyEquivalent";
 
 NSString * const kMenuActionTitle = @"AMLocalizedStringBuilderShotcut";
-NSString * const kStoreLocalizedStringPath = @"AMLocalizedStringBuilderPath";
