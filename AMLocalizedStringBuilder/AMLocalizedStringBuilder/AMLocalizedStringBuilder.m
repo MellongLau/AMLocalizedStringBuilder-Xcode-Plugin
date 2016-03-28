@@ -43,7 +43,7 @@
     }
     
     [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-    NSString *title = [NSString stringWithFormat:@"AMLocalizedStringBuilder(v%@)", [self getBundleVersion]];
+    NSString *title = [NSString stringWithFormat:@"AMLocalizedStringBuilder (v%@)", [self getBundleVersion]];
     NSMenuItem* actionTitleMenuItem = [[NSMenuItem alloc] initWithTitle:title
                                                                  action:@selector(buildLocalizedString)
                                                           keyEquivalent:@"f"];
