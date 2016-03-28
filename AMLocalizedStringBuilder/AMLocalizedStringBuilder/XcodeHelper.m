@@ -23,4 +23,34 @@
     return nil;
 }
 
+
++ (NSArray *)findLocalizedStringFilesPath:(NSString *)projectDir
+{
+    NSTask* task = [[NSTask alloc] init];
+    [task setLaunchPath:@"/bin/bash"];
+    NSString* shellPath =
+    [[NSBundle bundleForClass:[self class]] pathForResource:@"FindLocalizedStringFiles"
+                                                     ofType:@"sh"];
+    [task setArguments:@[ shellPath , projectDir]];
+    
+    
+    NSPipe * result = [NSPipe pipe];
+    NSFileHandle *file = result.fileHandleForReading;
+    [task setStandardOutput:result];
+    
+    [task launch];
+    
+    NSMutableData *data = [NSMutableData dataWithCapacity:512];
+    while ([task isRunning]) {
+        [data appendData:[file readDataToEndOfFile]];
+    }
+    
+    [file closeFile];
+    NSString * stringRead = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self != ''"];
+    NSArray *pathList = [[stringRead componentsSeparatedByString:@"\n"] filteredArrayUsingPredicate:predicate];
+    return pathList;
+}
+
 @end

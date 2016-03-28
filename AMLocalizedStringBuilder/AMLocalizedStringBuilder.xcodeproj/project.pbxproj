@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		246ADFE21CA9045800A1D5B3 /* ConfigurationWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246ADFE01CA9045800A1D5B3 /* ConfigurationWindowController.m */; };
+		246ADFE31CA9045800A1D5B3 /* ConfigurationWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246ADFE11CA9045800A1D5B3 /* ConfigurationWindowController.xib */; };
+		246ADFE51CA9109600A1D5B3 /* FindLocalizedStringFiles.sh in Sources */ = {isa = PBXBuildFile; fileRef = 246ADFE41CA9109600A1D5B3 /* FindLocalizedStringFiles.sh */; };
+		246ADFE61CA919B000A1D5B3 /* FindLocalizedStringFiles.sh in Resources */ = {isa = PBXBuildFile; fileRef = 246ADFE41CA9109600A1D5B3 /* FindLocalizedStringFiles.sh */; };
+		246ADFE81CA91FD600A1D5B3 /* MenuItemData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 246ADFE71CA91FD600A1D5B3 /* MenuItemData.plist */; };
+		246ADFEB1CA9203000A1D5B3 /* AMMenuGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 246ADFEA1CA9203000A1D5B3 /* AMMenuGenerator.m */; };
+		246ADFEE1CA920DF00A1D5B3 /* AMConstString.m in Sources */ = {isa = PBXBuildFile; fileRef = 246ADFED1CA920DF00A1D5B3 /* AMConstString.m */; };
 		24BA88F01CA8D33300D4B872 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BA88EF1CA8D33300D4B872 /* AppKit.framework */; };
 		24BA88F21CA8D33300D4B872 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BA88F11CA8D33300D4B872 /* Foundation.framework */; };
 		24BA88F61CA8D33300D4B872 /* AMLocalizedStringBuilder.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 24BA88F51CA8D33300D4B872 /* AMLocalizedStringBuilder.xcscheme */; };
@@ -19,6 +26,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		246ADFDF1CA9045800A1D5B3 /* ConfigurationWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationWindowController.h; sourceTree = "<group>"; };
+		246ADFE01CA9045800A1D5B3 /* ConfigurationWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationWindowController.m; sourceTree = "<group>"; };
+		246ADFE11CA9045800A1D5B3 /* ConfigurationWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigurationWindowController.xib; sourceTree = "<group>"; };
+		246ADFE41CA9109600A1D5B3 /* FindLocalizedStringFiles.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FindLocalizedStringFiles.sh; sourceTree = "<group>"; };
+		246ADFE71CA91FD600A1D5B3 /* MenuItemData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuItemData.plist; sourceTree = "<group>"; };
+		246ADFE91CA9203000A1D5B3 /* AMMenuGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMMenuGenerator.h; sourceTree = "<group>"; };
+		246ADFEA1CA9203000A1D5B3 /* AMMenuGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMMenuGenerator.m; sourceTree = "<group>"; };
+		246ADFEC1CA920DF00A1D5B3 /* AMConstString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMConstString.h; sourceTree = "<group>"; };
+		246ADFED1CA920DF00A1D5B3 /* AMConstString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMConstString.m; sourceTree = "<group>"; };
 		24BA88EC1CA8D33300D4B872 /* AMLocalizedStringBuilder.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AMLocalizedStringBuilder.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		24BA88EF1CA8D33300D4B872 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		24BA88F11CA8D33300D4B872 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -81,11 +97,20 @@
 			children = (
 				24BA88F71CA8D33300D4B872 /* AMLocalizedStringBuilder.h */,
 				24BA88F81CA8D33300D4B872 /* AMLocalizedStringBuilder.m */,
+				246ADFE91CA9203000A1D5B3 /* AMMenuGenerator.h */,
+				246ADFEA1CA9203000A1D5B3 /* AMMenuGenerator.m */,
 				24BFD8D31CA8E02000E4B2A4 /* NSObject_Extension.h */,
 				24BFD8D41CA8E02000E4B2A4 /* NSObject_Extension.m */,
+				246ADFEC1CA920DF00A1D5B3 /* AMConstString.h */,
+				246ADFED1CA920DF00A1D5B3 /* AMConstString.m */,
+				246ADFDF1CA9045800A1D5B3 /* ConfigurationWindowController.h */,
+				246ADFE01CA9045800A1D5B3 /* ConfigurationWindowController.m */,
+				246ADFE11CA9045800A1D5B3 /* ConfigurationWindowController.xib */,
 				24BA88FA1CA8D33300D4B872 /* XcodeHelper.h */,
 				24BA88FB1CA8D33300D4B872 /* XcodeHelper.m */,
 				24BA89031CA8D3B400D4B872 /* AutoGenLocalizedString.sh */,
+				246ADFE41CA9109600A1D5B3 /* FindLocalizedStringFiles.sh */,
+				246ADFE71CA91FD600A1D5B3 /* MenuItemData.plist */,
 				24BA88FD1CA8D33300D4B872 /* Info.plist */,
 				24BA88F41CA8D33300D4B872 /* Supporting Files */,
 			);
@@ -156,8 +181,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				246ADFE61CA919B000A1D5B3 /* FindLocalizedStringFiles.sh in Resources */,
 				24BA89071CA8D78700D4B872 /* LICENSE in Resources */,
+				246ADFE81CA91FD600A1D5B3 /* MenuItemData.plist in Resources */,
 				24BA88F61CA8D33300D4B872 /* AMLocalizedStringBuilder.xcscheme in Resources */,
+				246ADFE31CA9045800A1D5B3 /* ConfigurationWindowController.xib in Resources */,
 				24BA89041CA8D3B400D4B872 /* AutoGenLocalizedString.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +200,10 @@
 				24BA89081CA8D78700D4B872 /* README.md in Sources */,
 				24BA88F91CA8D33300D4B872 /* AMLocalizedStringBuilder.m in Sources */,
 				24BA88FC1CA8D33300D4B872 /* XcodeHelper.m in Sources */,
+				246ADFE51CA9109600A1D5B3 /* FindLocalizedStringFiles.sh in Sources */,
+				246ADFE21CA9045800A1D5B3 /* ConfigurationWindowController.m in Sources */,
+				246ADFEB1CA9203000A1D5B3 /* AMMenuGenerator.m in Sources */,
+				246ADFEE1CA920DF00A1D5B3 /* AMConstString.m in Sources */,
 				24BFD8D51CA8E02000E4B2A4 /* NSObject_Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,22 +1,28 @@
 #/bin/bash
+#
+#  AMLocalizedStringBuilder
+#
+#  Created by Mellong on 16/3/28.
+#  Copyright © 2016年 tendencystudio. All rights reserved.
 
 PROJECT_DIR=$1
+STRING_FILE=$2
 
 H_FILE="${PROJECT_DIR}/temple.h"
 M_FILE="${PROJECT_DIR}/temple.m"
 RESULT_H_FILE="${PROJECT_DIR}/AMLocalizedString.h"
 RESULT_M_FILE="${PROJECT_DIR}/AMLocalizedString.m"
 
-STRING_FILE=`find $PROJECT_DIR -name "*.strings" -print | grep -E ".*en.lproj.*"`
-
-if [ "$STRING_FILE" == "" ]; then
-STRING_FILE=`find $PROJECT_DIR -name "*.strings" -print`
-echo $STRING_FILE
-    if [ "$STRING_FILE" == "" ]; then
-    echo $STRING_FILE
-    exit
-    fi
-fi
+#STRING_FILE=`find $PROJECT_DIR -name "*.strings" -print | grep -E ".*en.lproj.*"`
+#
+#if [ "$STRING_FILE" == "" ]; then
+#STRING_FILE=`find $PROJECT_DIR -name "*.strings" -print`
+#echo $STRING_FILE
+#    if [ "$STRING_FILE" == "" ]; then
+#    echo $STRING_FILE
+#    exit
+#    fi
+#fi
 
 
 

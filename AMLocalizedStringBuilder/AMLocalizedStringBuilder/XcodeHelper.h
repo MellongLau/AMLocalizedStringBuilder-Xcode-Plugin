@@ -135,5 +135,6 @@
 @interface XcodeHelper : NSObject
 
 + (IDEWorkspaceDocument*)currentWorkspaceDocument;
++ (NSArray *)findLocalizedStringFilesPath:(NSString *)projectDir;
 
 @end

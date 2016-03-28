@@ -8,10 +8,13 @@
 
 #import "AMLocalizedStringBuilder.h"
 #import "XcodeHelper.h"
+#import "ConfigurationWindowController.h"
+#import "AMMenuGenerator.h"
 
 @interface AMLocalizedStringBuilder()
 
 @property (nonatomic, strong, readwrite) NSBundle *bundle;
+@property (nonatomic, strong) ConfigurationWindowController * settingWindowController;
 
 @end
 
@@ -37,28 +40,7 @@
 
 - (void)didApplicationFinishLaunchingNotification:(NSNotification*)noti
 {
-    NSMenuItem* menuItem = [[NSApp mainMenu] itemWithTitle:@"Product"];
-    if (!menuItem) {
-        return;
-    }
-    
-    [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-    NSString *title = [NSString stringWithFormat:@"AMLocalizedStringBuilder (v%@)", [self getBundleVersion]];
-    NSMenuItem* actionTitleMenuItem = [[NSMenuItem alloc] initWithTitle:title
-                                                                 action:@selector(buildLocalizedString)
-                                                          keyEquivalent:@"f"];
-    
-    
-    [[menuItem submenu] addItem:actionTitleMenuItem];
-    
-    NSMenuItem* actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Build Localized String"
-                                                            action:@selector(buildLocalizedString)
-                                                     keyEquivalent:@"f"];
-    
-    [actionMenuItem setKeyEquivalentModifierMask:NSControlKeyMask];
-    
-    [actionMenuItem setTarget:self];
-    [[menuItem submenu] addItem:actionMenuItem];
+    [AMMenuGenerator generateMenuItems:self.bundle version:[self getBundleVersion] target:self];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:NSApplicationDidFinishLaunchingNotification
@@ -75,16 +57,35 @@
 {
     NSString* filePath = [[XcodeHelper currentWorkspaceDocument].workspace.representingFilePath.fileURL path];
     NSString* projectDir = [filePath stringByDeletingLastPathComponent];
-    //    NSString* projectName = [filePath lastPathComponent];
-    
+    NSString* projectName = [[filePath lastPathComponent] stringByDeletingPathExtension];
+    NSString *path = [[NSUserDefaults standardUserDefaults] objectForKey:projectName];
+    if (path == nil) {
+        NSArray *pathList = [XcodeHelper findLocalizedStringFilesPath:projectDir];
+        if (pathList.count > 0) {
+            [[NSUserDefaults standardUserDefaults] setObject:pathList.firstObject forKey:projectName];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }else {
+            NSLog(@"Error: no localized string file found!");
+            return;
+        }
+        
+    }
+
     NSTask* task = [[NSTask alloc] init];
     [task setLaunchPath:@"/bin/bash"];
     NSString* shellPath =
     [[NSBundle bundleForClass:[self class]] pathForResource:@"AutoGenLocalizedString"
                                                      ofType:@"sh"];
-    [task setArguments:@[ shellPath , projectDir]];
+    NSString *localizedStringFilePath = [[NSUserDefaults standardUserDefaults] objectForKey:projectName];
+    [task setArguments:@[ shellPath , projectDir, localizedStringFilePath]];
     
     [task launch];
+}
+
+- (void)showSettingWindow
+{
+    self.settingWindowController = [[ConfigurationWindowController alloc] initWithWindowNibName:@"ConfigurationWindowController"];
+    [self.settingWindowController showWindow:self.settingWindowController];
 }
 
 - (void)dealloc
