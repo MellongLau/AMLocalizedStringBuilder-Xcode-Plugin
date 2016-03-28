@@ -15,14 +15,14 @@
         <window title="AMLocalizedStringBuilder" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="480" height="259"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="307"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="259"/>
+                <rect key="frame" x="0.0" y="0.0" width="480" height="307"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <scrollView ambiguous="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZN2-uU-fTn">
-                        <rect key="frame" x="20" y="42" width="440" height="180"/>
+                        <rect key="frame" x="20" y="90" width="440" height="180"/>
                         <clipView key="contentView" ambiguous="YES" id="Xb3-75-Ec1">
                             <rect key="frame" x="1" y="17" width="438" height="162"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,9 +98,28 @@
                             <action selector="onCloseButtonClicked:" target="-2" id="ewf-oB-9dT"/>
                         </connections>
                     </button>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EnP-5W-4FY">
-                        <rect key="frame" x="19" y="230" width="243" height="17"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EnP-5W-4FY">
+                        <rect key="frame" x="19" y="278" width="258" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Select which language string file to build." id="dhI-Zd-E4m">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xay-r1-jeJ">
+                        <rect key="frame" x="20" y="35" width="440" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="Shs-ky-YUp"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Swj-Yb-Bh8">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vpO-2t-YMI">
+                        <rect key="frame" x="18" y="65" width="345" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Localized Function Name (Only support one parameter)" id="xCx-Vl-PHi">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -109,10 +128,15 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="EnP-5W-4FY" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="12" id="58F-pN-9Wk"/>
+                    <constraint firstItem="cYf-EO-42G" firstAttribute="top" secondItem="xay-r1-jeJ" secondAttribute="bottom" constant="5" id="CdZ-gL-dBC"/>
+                    <constraint firstItem="xay-r1-jeJ" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="Cvr-CN-sGU"/>
+                    <constraint firstItem="xay-r1-jeJ" firstAttribute="top" secondItem="vpO-2t-YMI" secondAttribute="bottom" constant="8" id="FZZ-V6-Tlj"/>
+                    <constraint firstItem="vpO-2t-YMI" firstAttribute="leading" secondItem="xay-r1-jeJ" secondAttribute="leading" id="JYW-AU-nJf"/>
                     <constraint firstItem="ZN2-uU-fTn" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="37" id="KHW-rt-VZA"/>
-                    <constraint firstItem="cYf-EO-42G" firstAttribute="top" secondItem="SEb-E3-4L7" secondAttribute="bottom" constant="13" id="UQY-4m-gWO"/>
+                    <constraint firstItem="vpO-2t-YMI" firstAttribute="top" secondItem="SEb-E3-4L7" secondAttribute="bottom" constant="9" id="Kom-3h-cWr"/>
                     <constraint firstItem="ZN2-uU-fTn" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="a5v-kj-6Dg"/>
                     <constraint firstAttribute="trailing" secondItem="ZN2-uU-fTn" secondAttribute="trailing" constant="20" id="bmi-Sl-oCp"/>
+                    <constraint firstAttribute="trailing" secondItem="xay-r1-jeJ" secondAttribute="trailing" constant="20" id="fpb-mu-95j"/>
                     <constraint firstItem="EnP-5W-4FY" firstAttribute="leading" secondItem="SEb-E3-4L7" secondAttribute="leading" id="h1B-zy-m5w"/>
                     <constraint firstAttribute="bottom" secondItem="cYf-EO-42G" secondAttribute="bottom" constant="12" id="jyb-pJ-Y8m"/>
                     <constraint firstItem="cYf-EO-42G" firstAttribute="trailing" secondItem="SEb-E3-4L7" secondAttribute="trailing" id="x9E-Jb-jBb"/>
@@ -121,7 +145,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="423" y="207.5"/>
+            <point key="canvasLocation" x="423" y="232.5"/>
         </window>
     </objects>
 </document>

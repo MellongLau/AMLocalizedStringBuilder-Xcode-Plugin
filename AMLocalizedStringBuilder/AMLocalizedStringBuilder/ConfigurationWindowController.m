@@ -10,12 +10,11 @@
 #import "XcodeHelper.h"
 #import "AMConstString.h"
 
-@interface ConfigurationWindowController ()
+@interface ConfigurationWindowController () <NSTextFieldDelegate>
 
 @property (weak) IBOutlet NSTableView *tableView;
 @property (nonatomic, strong) NSArray *dataList;
 @property (nonatomic, strong) NSString *projectName;
-
 
 @end
 
@@ -64,5 +63,6 @@
 - (IBAction)onCloseButtonClicked:(NSButton *)sender {
     [self close];
 }
+
 
 @end
