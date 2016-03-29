@@ -16,6 +16,10 @@ AMLocalizedStringBuilder is the localized string helper which help you build you
 **如果觉得这款插件不错的话请点击右上角的star和推荐给你的朋友，如果想即时了解到我的最新消息，请拉到底部扫描二维码关注我的公众号**
 
 ## Usage
+1. Click Xcode Menu `Product`->`AMLocalizedStringBuilder`->`Build Localized String` or use shortcut `ctrl+f` to build the `Localizable.strings` file.
+2. open your project folder will find these two files: `AMLocalizedString.h` and `AMLocalizedString`, add these two files reference to your project.
+3. Import `AMLocalizedString.h` and use R_String.<#your_localized_string_key#> to get the localized string. 
+4. On the other hand, you can use shortcut `ctrl+cmd+s` to show the setting window, choose the target localizable string file you want to build, and click `ctrl+f` to build.
 
 ![screenshot.gif](https://raw.github.com/MellongLau/AMLocalizedStringBuilder-Xcode-Plugin/master/Screenshots/screenshot.gif)
 
