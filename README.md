@@ -18,8 +18,8 @@ AMLocalizedStringBuilder is the localized string helper which help you build you
 ## Usage
 1. Click Xcode Menu `Product`->`AMLocalizedStringBuilder`->`Build Localized String` or use shortcut `ctrl+f` to build the `Localizable.strings` file.  
   *点击Xcode顶部菜单 `Product`->`AMLocalizedStringBuilder`->`Build Localized String` 或者直接用快捷键 `ctrl+f` 来把`Localizable.strings`生成为object-c类。*
-2. Open your project folder will find these two files: `AMLocalizedString.h` and `AMLocalizedString`, add these two files reference to your project.  
-  *打开你当前项目文件夹，可以找到已经生成好的 `AMLocalizedString.h` and `AMLocalizedString` 这两个文件，把他们直接拉到项目中添加引用。*
+2. Open your project folder will find these two files: `AMLocalizedString.h` and `AMLocalizedString.m`, add these two files reference to your project.  
+  *打开你当前项目文件夹，可以找到已经生成好的 `AMLocalizedString.h` and `AMLocalizedString.m` 这两个文件，把他们直接拉到项目中添加引用。*
 3. Import `AMLocalizedString.h` and use `R_String.am_<#your_localized_string_key#>` to get the localized string.   
   *在要用到的地方先导入头文件 `AMLocalizedString.h`， 然后使用`R_String.am_<#your_localized_string_key#>`来获取对应本地化的文字。*
 4. On the other hand, you can use shortcut `ctrl+cmd+s` to show the setting window, choose the target localizable string file you want to build, and click `ctrl+f` to build.  
