@@ -21,12 +21,9 @@ AMLocalizedStringBuilder is the localized string helper which help you build you
 3. Import `AMLocalizedString.h` and use `R_String.am_<#your_localized_string_key#>` to get the localized string.   
 4. On the other hand, you can use shortcut `ctrl+cmd+s` to show the setting window, choose the target localizable string file you want to build, and click `ctrl+f` to build.  
 
-*1. 点击Xcode顶部菜单 `Product`->`AMLocalizedStringBuilder`->`Build Localized String` 或者直接用快捷键 `ctrl+f` 来把`Localizable.strings`生成为object-c类。*
-
-*2. 打开你当前项目文件夹，可以找到已经生成好的 `AMLocalizedString.h` and `AMLocalizedString.m` 这两个文件，把他们直接拉到项目中添加引用。*
-
-*3. 在要用到的地方先导入头文件 `AMLocalizedString.h`， 然后使用`R_String.am_<#your_localized_string_key#>`来获取对应本地化的文字。*
-
+> *1. 点击Xcode顶部菜单 `Product`->`AMLocalizedStringBuilder`->`Build Localized String` 或者直接用快捷键 `ctrl+f` 来把`Localizable.strings`生成为object-c类。*  
+  *2. 打开你当前项目文件夹，可以找到已经生成好的 `AMLocalizedString.h` and `AMLocalizedString.m` 这两个文件，把他们直接拉到项目中添加引用。*  
+*3. 在要用到的地方先导入头文件 `AMLocalizedString.h`， 然后使用`R_String.am_<#your_localized_string_key#>`来获取对应本地化的文字。*  
 *4. 另外，你还可以用快捷键`ctrl+cmd+s`打开设置窗口，在设置窗口里面选择你要进行转换的`Localizable.strings`文件。*
 
 ![screenshot.gif](https://raw.github.com/MellongLau/AMLocalizedStringBuilder-Xcode-Plugin/master/Screenshots/screenshot.gif)
