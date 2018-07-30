@@ -64,11 +64,6 @@ defaults delete com.apple.dt.Xcode DVTPlugInManagerNonApplePlugIns-Xcode-7.1
 
 Or download and execute this [script](https://github.com/cielpy/RPAXU) to add your current Xcode DVTPlugInCompatibilityUUID to all the Xcode plugins.
 
-## More
-Learn more? Follow my `WeChat` public account `mellong`:  
-*想了解更多？请关注我的微信公众号 `mellong`, 扫描下面二维码进行关注即可。*
-
-![WeChat QRcode](http://www.devlong.com/blogImages/qrcode_for_mellong.jpg)
 
 ## License
 
